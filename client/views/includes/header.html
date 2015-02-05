@@ -8,9 +8,10 @@
             <a class="brand" href="{{pathFor 'postsList'}}">Microscope</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li>
-                        <a href="{{pathFor 'postSubmit'}}">New</a>
-                    </li>
+                    <!-- currentUser helper is the handlebars equivalent of Meteor.user() -->
+                    {{#if currentUser}}
+                        <li><a href="{{pathFor 'postSubmit'}}">New</a></li>
+                    {{/if}}
                 </ul>
                 <ul class="nav pull-right">
                     <!--  requirements:
