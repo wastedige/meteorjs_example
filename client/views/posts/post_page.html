@@ -1,4 +1,12 @@
-<template name="postPage"> 
+<template name="postPage">
     Welcome to the post's specific page:
-    {{> postItem}}
+    <div class="post-page page">
+        {{> postItem}}
+
+        <ul class="comments">
+            {{#each comments}} 
+                {{> comment}} 
+            {{/each}}
+        </ul>
+    </div>
 </template>
